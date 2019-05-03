@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+.button{
+  position: absolute;
+  bottom: 10px;
+}
+.button button:hover{
+  cursor:pointer;
+}
+
+.button button:focus{
+  outline:none;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: black;
+}
+#start-btn {
+  font-size: 24px;
+  padding: 40px 40px 40px 40px ;
+  margin-top: 30px;
+  border-radius: 10px;
+  background:url("images/gauntlet.png") white 15px no-repeat;
+  background-size: 50px;
+}
+.dust {
+  position: absolute;
+}

@@ -5,37 +5,45 @@ body {
   margin: 0;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: black;
 }
 
-.button{
-  position: absolute;
-  bottom: 10px;
-}
-.button button:hover{
-  cursor:pointer;
-}
-
-.button button:focus{
-  outline:none;
+.gauntlet{
+  display: flex;
 }
 
 .content {
   display: flex;
+  width:1000px;
+  height:500px;
   align-items: center;
   flex-direction: column;
   background: black;
+  margin-top: 131px;
 }
-#start-btn {
+
+.gauntletButton {
   font-size: 24px;
   padding: 40px 40px 40px 40px ;
   margin-top: 30px;
   border-radius: 10px;
-  background:url("images/gauntlet.png") white 15px no-repeat;
-  background-size: 50px;
+  background:url("images/gauntlet.png");
+  background-color: white;
+  background-size: 77px;
+  background-repeat: no-repeat;
 }
+
+.gauntletButton:hover{
+  cursor:pointer;
+}
+
+.gauntletButton:focus{
+  outline:none;
+}
+
 .dust {
   position: absolute;
 }

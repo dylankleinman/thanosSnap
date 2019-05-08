@@ -7,11 +7,14 @@ snap.src = "images/snap.gif"
 restore.src = "images/restore.gif"
 $("#snap").click(function(){
   if(snapCount % 2 == 0){
+    console.log('snap');
     $("#snap img").attr('src', snap.src)
     animateFade();
   } else {
+    console.log('restore');
+    $('.content').css('z-index','-1');
     $("#snap img").attr('src', restore.src)
-    animateRestore();
+    initscene();
   }
   snapCount++
 });

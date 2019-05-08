@@ -9,6 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   background: black;
+  overflow: hidden;
 }
 
 .gauntlet{
@@ -24,8 +25,8 @@ body {
   height:401px;
   align-items: center;
   flex-direction: column;
-  background: black;
   border: none;
+  background: black;
 }
 
 .gauntletButton {

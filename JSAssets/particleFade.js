@@ -1,20 +1,24 @@
 var imageDataArray = [];
 var canvasCount = 35;
 let snapCount = 2;
+const snap = new Image();
+const restore = new Image();
+snap.src = "images/snap.gif"
+restore.src = "images/restore.gif"
 $("#snap").click(function(){
-  console.log(snapCount);
   if(snapCount % 2 == 0){
-    $("#snap").css('background', 'white url("images/snap.gif") -3px no-repeat');
-    //animateFade();
+    $("#snap img").attr('src', snap.src)
+    animateFade();
   } else {
-    $("#snap").css('background', 'white url("images/restore.gif") 1px no-repeat');
+    $("#snap img").attr('src', restore.src)
+    animateRestore();
   }
   snapCount++
 });
 
 function animateFade(){
-  html2canvas($(".content")[0]).then(canvas => {
-    //capture all div data as image
+  html2canvas($(".content")[0],{scale:1}).then(canvas => {
+    //capture all div data asimage
     ctx = canvas.getContext("2d");
     var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     var pixelArr = imageData.data;

@@ -1,5 +1,7 @@
 function animateRestore(){
-  console.log('restore');
+    console.log('running');
+    $("#avengersImage").css('display', 'block').css("z-index",1);
+    //$("#content").css("z-index:")
 }
 
 var scene, cam, renderer, clock, portalParticles = [], portalLight, smokeParticles = [];

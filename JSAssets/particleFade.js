@@ -12,9 +12,18 @@ $("#snap").click(function(){
     animateFade();
   } else {
     console.log('restore');
-    $('.content').css('z-index','-1');
     $("#snap img").attr('src', restore.src)
     initscene();
+      $(".content").css("z-index",-1);
+      //$("#avengersImage").height('1px');
+    setTimeout(function(){
+      $("#avengersImage").css('display', 'block').css("z-index",1)
+      $("canvas").remove();
+    },3000);
+    //
+    // for(let i=1000; i>1;i++){
+    //   $("#avengersImage").css('display', 'block').css("z-index",1);
+    // }
   }
   snapCount++
 });
